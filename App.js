@@ -12,6 +12,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 import ResourceUploader from './pages/ResourceUploader';
 import StudyPlanCreator from "./pages/StudyPlanCreator";
 import Roadmaps from './pages/Roadmaps.js';
+import DsaRoadmap from './pages/DSAroadmap.js';
 
 // Import Firebase auth
 import { auth } from './services/firebaseConfig';
@@ -97,6 +98,7 @@ function App() {
           {/* Default Route */}
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/roadmaps" element={<Roadmaps />} />
+          <Route path="/roadmap" element={<DsaRoadmap />} />
         </Routes>
       </Router>
     </ThemeProvider>
