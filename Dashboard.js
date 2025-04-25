@@ -217,6 +217,12 @@ const Dashboard = () => {
         >
           View Roadmaps
         </button>
+        <button 
+          onClick={() => navigate('/roadmap')} 
+          className="roadmap-button dsa-button"
+        >
+        DSA Roadmap
+      </button>
       </header>
       
       <div className="dashboard-grid">
