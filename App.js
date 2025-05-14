@@ -5,6 +5,7 @@ import { CssBaseline } from '@mui/material';
 import PrivateRoute from './components/PrivateRoute';
 
 // Import pages
+import LandingPage from './components/LandingPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
@@ -18,7 +19,7 @@ import DsaRoadmap from './pages/DSAroadmap.js';
 import { auth } from './services/firebaseConfig';
 import { onAuthStateChanged } from 'firebase/auth';
 
-// Create a theme
+// Theme
 const theme = createTheme({
   palette: {
     primary: {
@@ -51,7 +52,6 @@ const ProtectedRoute = ({ children }) => {
       }
     );
 
-    // Cleanup subscription
     return () => unsubscribe();
   }, []);
 
@@ -73,6 +73,7 @@ function App() {
       <Router>
         <Routes>
           {/* Public Routes */}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           
